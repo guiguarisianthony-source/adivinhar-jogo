@@ -1,3 +1,4 @@
+// Sorteia um número de 1 a 3
 const numeroSecreto = Math.floor(Math.random() * 3) + 1;
 let tentativas = 0;
 
@@ -5,8 +6,8 @@ function adivinhar() {
   const chute = parseInt(document.getElementById('chute').value);
   const mensagem = document.getElementById('mensagem');
 
-  if (isNaN(chute) || chute < 1 || chute > 100) {
-    mensagem.textContent = "Por favor, digite um número válido entre 1 e 100.";
+  if (isNaN(chute) || chute < 1 || chute > 3) {
+    mensagem.textContent = "Por favor, digite um número válido entre 1 e 3.";
     mensagem.style.color = "#f38ba8";
     return;
   }
