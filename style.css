@@ -16,8 +16,29 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
-  max-width: 350px;
+  max-width: 380px;
   width: 100%;
+}
+
+.placar {
+  background-color: #181825;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #45475a;
+}
+
+.rank {
+  color: #f9e2af;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.streak {
+  color: #89b4fa;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 h1 {
