@@ -7,6 +7,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  position: relative;
 }
 
 .container {
@@ -60,4 +61,13 @@ button:hover {
 #mensagem {
   margin-top: 15px;
   font-weight: bold;
+}
+
+.creditos {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 0.85rem;
+  color: #a6adc8;
+  opacity: 0.8;
 }
