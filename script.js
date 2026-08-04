@@ -17,11 +17,8 @@ function adivinhar() {
   if (chute === numeroSecreto) {
     mensagem.textContent = `Parabéns! Você acertou o número ${numeroSecreto} em ${tentativas} tentativa(s)!`;
     mensagem.style.color = "#a6e3a1";
-  } else if (chute < numeroSecreto) {
-    mensagem.textContent = "O número secreto é MAIOR. Tente novamente!";
-    mensagem.style.color = "#f9e2af";
   } else {
-    mensagem.textContent = "O número secreto é MENOR. Tente novamente!";
+    mensagem.textContent = "Você errou, tente novamente!";
     mensagem.style.color = "#f9e2af";
   }
 }
