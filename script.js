@@ -1,6 +1,36 @@
 let numeroSecreto = Math.floor(Math.random() * 3) + 1;
 let winStreak = 0;
 
+// VERIFICA SE O NOME JÁ ESTÁ SALVO AO ABRIR O SITE
+window.onload = function() {
+  const nomeSalvo = localStorage.getItem('nomeUsuarioJogo');
+  if (nomeSalvo) {
+    iniciarJogo(nomeSalvo);
+  }
+};
+
+// SALVA O NOME PARA SEMPRE NO NAVEGADOR
+function salvarNome() {
+  const inputNome = document.getElementById('nome-usuario');
+  const nome = inputNome.value.trim();
+
+  if (nome === '') {
+    alert('Por favor, digite um nome válido!');
+    return;
+  }
+
+  localStorage.setItem('nomeUsuarioJogo', nome);
+  iniciarJogo(nome);
+}
+
+// TROCA A TELA DE LOGIN PELA TELA DO JOGO
+function iniciarJogo(nome) {
+  document.getElementById('tela-login').classList.add('esconde');
+  document.getElementById('tela-jogo').classList.remove('esconde');
+  document.getElementById('nome-exibido').textContent = nome;
+}
+
+// LÓGICA DO JOGO
 function adivinhar() {
   const inputChute = document.getElementById('chute');
   const chute = parseInt(inputChute.value);
@@ -44,9 +74,9 @@ function abrirMeme() {
   
   if (video) {
     video.currentTime = 0;
-    video.muted = false; // Som original do vídeo ativo
+    video.muted = false;
     video.play().catch(error => {
-      console.log("Aguardando permissão de mídia do usuário:", error);
+      console.log("Aguardando ação do usuário para reproduzir o áudio:", error);
     });
   }
 }
