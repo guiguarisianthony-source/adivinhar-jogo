@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- TELA DO JOGO -->
+  <!-- TELA PRINCIPAL DO JOGO -->
   <div class="container" id="tela-jogo">
     <div class="placar">
       <div class="rank">🏆 TOP 1: Guilherme (67 acertos consecutivos)</div>
@@ -18,25 +18,23 @@
     <h1>Jogo de Adivinhação</h1>
     <p>Tente adivinhar o número entre 1 e 3:</p>
     
-    <input type="number" id="chute" min="1" placeholder="Digite um número">
+    <input type="number" id="chute" min="1" placeholder="Digite 1, 2 ou 3">
     <br>
     <button onclick="adivinhar()">Tentar</button>
 
     <p id="mensagem"></p>
   </div>
 
-  <!-- TELA DO MEME 67 -->
+  <!-- TELA POPUP DO MEME 67 -->
   <div id="modal-meme" class="modal esconde">
     <div class="modal-conteudo">
       <button class="fechar" onclick="fecharMeme()">&times;</button>
       
-      <!-- Vídeo do meme baixado -->
-      <video id="video-meme" width="300" autoplay loop muted style="border-radius: 8px;">
+      <!-- Vídeo meme67.mp4 que você subiu -->
+      <video id="video-meme" width="300" controls style="border-radius: 8px;">
         <source src="meme67.mp4" type="video/mp4">
+        Seu navegador não suporta este vídeo.
       </video>
-
-      <!-- Áudio baixado -->
-      <audio id="audio-meme" src="audio67.mp3"></audio>
     </div>
   </div>
 
