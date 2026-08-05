@@ -92,7 +92,7 @@ button:hover {
   font-weight: bold;
 }
 
-/* POPUP DO MEME */
+/* POPUPS */
 .modal {
   position: fixed;
   top: 0;
@@ -120,6 +120,19 @@ button:hover {
   box-shadow: 0 0 30px rgba(137, 180, 250, 0.6);
   max-width: 480px;
   width: 90%;
+}
+
+.conteudo-secreto {
+  border-color: #f38ba8;
+  box-shadow: 0 0 30px rgba(243, 139, 168, 0.6);
+}
+
+.texto-destaque {
+  color: #f9e2af;
+  font-size: 1.6rem;
+  margin: 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .fechar {
