@@ -84,6 +84,49 @@ button:hover {
   font-weight: bold;
 }
 
+/* POPUP DO MEME */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.esconde {
+  display: none !important;
+}
+
+.modal-conteudo {
+  background-color: #2b2b3d;
+  padding: 20px;
+  border-radius: 16px;
+  position: relative;
+  text-align: center;
+  border: 2px solid #89b4fa;
+  box-shadow: 0 0 25px rgba(137, 180, 250, 0.5);
+}
+
+.fechar {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  font-size: 20px;
+  background-color: #f38ba8;
+  color: #11111b;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 30px;
+  padding: 0;
+  cursor: pointer;
+}
+
 .creditos {
   position: absolute;
   bottom: 15px;
