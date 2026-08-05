@@ -8,10 +8,19 @@
 </head>
 <body>
 
-  <!-- TELA PRINCIPAL DO JOGO -->
-  <div class="container" id="tela-jogo">
+  <!-- TELA INICIAL: PEDIR NOME DO USUÁRIO -->
+  <div class="container" id="tela-login">
+    <h1>Bem-vindo! 👋</h1>
+    <p>Digite seu nome de usuário para jogar:</p>
+    <input type="text" id="nome-usuario" placeholder="Seu nome ou apelido">
+    <br>
+    <button onclick="salvarNome()">Entrar no Jogo</button>
+  </div>
+
+  <!-- TELA PRINCIPAL DO JOGO (COMEÇA ESCONDIDA) -->
+  <div class="container esconde" id="tela-jogo">
     <div class="placar">
-      <div class="rank">🏆 TOP 1: Guilherme (67 acertos consecutivos)</div>
+      <div class="rank">👤 Jogador: <span id="nome-exibido"></span></div>
       <div class="streak">🔥 Sequência Atual: <span id="streak">0</span></div>
     </div>
 
@@ -30,7 +39,6 @@
     <div class="modal-conteudo">
       <button class="fechar" onclick="fecharMeme()">&times;</button>
       
-      <!-- Vídeo meme67.mp4 com som original e repetição contínua -->
       <video id="video-meme" width="100%" loop playsinline controls style="border-radius: 8px;">
         <source src="meme67.mp4" type="video/mp4">
       </video>
