@@ -31,7 +31,7 @@ body {
 .rank {
   color: #f9e2af;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin-bottom: 5px;
 }
 
@@ -51,7 +51,7 @@ p {
   font-size: 0.95rem;
 }
 
-input[type="number"] {
+input[type="number"], input[type="text"] {
   width: 80%;
   padding: 10px;
   margin: 15px 0;
