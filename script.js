@@ -38,7 +38,6 @@ function adivinhar() {
 
 function abrirMeme() {
   const modal = document.getElementById('modal-meme');
-  const audio = document.getElementById('audio-meme');
   const video = document.getElementById('video-meme');
 
   modal.classList.remove('esconde');
@@ -47,23 +46,14 @@ function abrirMeme() {
     video.currentTime = 0;
     video.play();
   }
-  
-  if (audio) {
-    audio.currentTime = 0;
-    audio.play();
-  }
 }
 
 function fecharMeme() {
   const modal = document.getElementById('modal-meme');
-  const audio = document.getElementById('audio-meme');
   const video = document.getElementById('video-meme');
 
   modal.classList.add('esconde');
 
-  if (audio) {
-    audio.pause();
-  }
   if (video) {
     video.pause();
   }
