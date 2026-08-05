@@ -44,7 +44,11 @@ function abrirMeme() {
   
   if (video) {
     video.currentTime = 0;
-    video.play();
+    video.muted = false;
+    video.loop = true; // Garante a repetição contínua
+    video.play().catch(error => {
+      console.log("Autoplay bloqueado pelo navegador:", error);
+    });
   }
 }
 
@@ -56,5 +60,6 @@ function fecharMeme() {
 
   if (video) {
     video.pause();
+    video.currentTime = 0;
   }
 }
