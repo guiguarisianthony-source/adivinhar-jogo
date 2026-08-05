@@ -44,6 +44,13 @@ function adivinhar() {
     return;
   }
 
+  // SE DIGITAR 674261
+  if (chute === 674261) {
+    abrirSecreto();
+    inputChute.value = '';
+    return;
+  }
+
   if (isNaN(chute) || chute < 1 || chute > 3) {
     mensagem.textContent = "Por favor, digite um número válido entre 1 e 3.";
     mensagem.style.color = "#f38ba8";
@@ -66,6 +73,7 @@ function adivinhar() {
   inputChute.value = '';
 }
 
+// POPUP 67 (VÍDEO)
 function abrirMeme() {
   const modal = document.getElementById('modal-meme');
   const video = document.getElementById('video-meme');
@@ -76,7 +84,7 @@ function abrirMeme() {
     video.currentTime = 0;
     video.muted = false;
     video.play().catch(error => {
-      console.log("Aguardando ação do usuário para reproduzir o áudio:", error);
+      console.log("Aguardando ação do usuário:", error);
     });
   }
 }
@@ -91,4 +99,15 @@ function fecharMeme() {
     video.pause();
     video.currentTime = 0;
   }
+}
+
+// POPUP SECRETO (674261)
+function abrirSecreto() {
+  const modal = document.getElementById('modal-secreto');
+  modal.classList.remove('esconde');
+}
+
+function fecharSecreto() {
+  const modal = document.getElementById('modal-secreto');
+  modal.classList.add('esconde');
 }
