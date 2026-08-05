@@ -44,11 +44,25 @@ function abrirMeme() {
   
   if (video) {
     video.currentTime = 0;
-    video.muted = false;
-    video.loop = true; // Garante a repetição contínua
-    video.play().catch(error => {
-      console.log("Autoplay bloqueado pelo navegador:", error);
-    });
+    video.loop = true;
+    
+    // Tenta reproduzir com som
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Se o navegador bloquear o som automático, muta temporariamente e roda
+        video.muted = true;
+        video.play();
+        
+        // E logo em seguida desmuta no primeiro clique
+        const desmutar = () => {
+          video.muted = false;
+          document.removeEventListener('click', desmutar);
+        };
+        document.addEventListener('click', desmutar);
+      });
+    }
   }
 }
 
