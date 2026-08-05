@@ -26,13 +26,21 @@ body {
   border-radius: 8px;
   margin-bottom: 20px;
   border: 1px solid #45475a;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .rank {
   color: #f9e2af;
   font-weight: bold;
-  font-size: 0.95rem;
-  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.jogador-info {
+  color: #cdd6f4;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .streak {
