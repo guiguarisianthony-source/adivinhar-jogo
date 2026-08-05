@@ -84,7 +84,7 @@ button:hover {
   font-weight: bold;
 }
 
-/* POPUP DO MEME AMPLIADO */
+/* POPUP DO MEME */
 .modal {
   position: fixed;
   top: 0;
@@ -110,7 +110,7 @@ button:hover {
   text-align: center;
   border: 3px solid #89b4fa;
   box-shadow: 0 0 30px rgba(137, 180, 250, 0.6);
-  max-width: 500px;
+  max-width: 480px;
   width: 90%;
 }
 
